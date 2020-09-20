@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/news_navgraph"
+    app:startDestination="@id/shownews2">
+
+    <fragment
+        android:id="@+id/shownews2"
+        android:name="com.example.appyhightask.fragments.shownews"
+        android:label="fragment_shownews"
+        tools:layout="@layout/fragment_shownews" >
+
+        <action
+            android:id="@+id/action_shownews2_to_newsDetail"
+            app:destination="@id/newsDetail" />
+        <action
+            android:id="@+id/action_shownews2_to_searchNews"
+            app:destination="@id/searchNews" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsDetail"
+        android:name="com.example.appyhightask.fragments.NewsDetail"
+        android:label="fragment_news_detail"
+        tools:layout="@layout/fragment_news_detail" >
+        <argument
+            android:name="Article"
+            app:argType="com.example.appyhightask.models.Article"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchNews"
+        android:name="com.example.appyhightask.fragments.SearchNews"
+        android:label="fragment_search_news"
+        tools:layout="@layout/fragment_search_news" />
+</navigation>

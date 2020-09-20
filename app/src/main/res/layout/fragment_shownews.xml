@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/darker_gray"
+    tools:context=".fragments.shownews">
+
+
+    <TextView
+        android:id="@+id/news_locate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/location"
+        android:textColor="@android:color/black" />
+    <!--<androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Countrynames"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_marginTop="4dp"
+        android:layout_toEndOf="@id/news_locate"
+        android:layout_marginStart="6dp"
+        />-->
+    <RelativeLayout
+        android:id="@+id/Countrynames"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginEnd="165dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginStart="78dp">
+
+        <Button
+            android:id="@+id/India"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="INDIA" />
+
+        <Button
+            android:id="@+id/USA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/India"
+            android:text="USA" />
+
+
+    </RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/newsActual"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_marginTop="66dp"
+        />
+
+
+</FrameLayout>
